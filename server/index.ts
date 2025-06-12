@@ -2,6 +2,9 @@ import { serve } from '@hono/node-server';
 import { Hono } from 'hono';
 import { cors } from 'hono/cors';
 import { TextAnalyticsClient, AzureKeyCredential } from '@azure/ai-text-analytics';
+import * as dotenv from 'dotenv';
+
+dotenv.config(); // Carregar variáveis de ambiente .env
 
 const app = new Hono();
 
