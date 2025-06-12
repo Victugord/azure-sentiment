@@ -22,7 +22,7 @@ interface SentimentRequest {
 
 interface SentimentResponse {
   success: boolean;
-  data?: any;
+  data?: unknown;
   error?: string;
 }
 
@@ -60,7 +60,7 @@ app.post('/api/sentiment-analysis', async (c) => {
     }];
 
     // Executar análise de sentimentos com mineração de opiniões
-    const results = await client.analyze("SentimentAnalysis", documents, {
+    const results = await client.analyzeSentiment( documents, {
       includeOpinionMining: true,
     });
 
@@ -117,7 +117,7 @@ app.get('/api/health', (c) => {
 });
 
 // Iniciar servidor
-const port = process.env.PORT ? parseInt(process.env.PORT) : 3001;
+const port = process.env.PORT ? Number.parseInt(process.env.PORT) : 3001;
 
 console.log(`🚀 Servidor a iniciar na porta ${port}`);
 
