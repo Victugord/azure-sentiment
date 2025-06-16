@@ -56,7 +56,7 @@ export const SentimentAnalyzer: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+    <div className="min-h-screen bg-linear-to-br from-slate-50 via-blue-50 to-indigo-100">
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-12">
@@ -75,7 +75,7 @@ export const SentimentAnalyzer: React.FC = () => {
         <div className="max-w-4xl mx-auto">
           {/* Input Form */}
           <div className="bg-white rounded-2xl shadow-lg border border-blue-100 mb-8 overflow-hidden">
-            <div className="bg-gradient-to-r from-blue-600 to-indigo-600 px-6 py-4">
+            <div className="bg-linear-to-r from-blue-600 to-indigo-600 px-6 py-4">
               <div className="flex items-center space-x-2">
                 <FileText className="w-5 h-5 text-white" />
                 <h2 className="text-xl font-semibold text-white">Inserir Texto</h2>
@@ -136,7 +136,7 @@ export const SentimentAnalyzer: React.FC = () => {
           {/* Error Display */}
           {error && (
             <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-8 flex items-start space-x-3">
-              <AlertCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
+              <AlertCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
               <div>
                 <h3 className="text-sm font-medium text-red-800">Erro na Análise</h3>
                 <p className="mt-1 text-sm text-red-700">{error}</p>

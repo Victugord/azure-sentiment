@@ -81,7 +81,7 @@ export const SentimentResults: React.FC<Props> = ({ result }) => {
     <div className="space-y-6">
       {/* Overall Sentiment */}
       <div className="bg-white rounded-2xl shadow-lg border border-blue-100 overflow-hidden">
-        <div className="bg-gradient-to-r from-indigo-600 to-purple-600 px-6 py-4">
+        <div className="bg-linear-to-r from-indigo-600 to-purple-600 px-6 py-4">
           <h2 className="text-xl font-semibold text-white flex items-center space-x-2">
             <MessageSquare className="w-5 h-5" />
             <span>Sentimento Geral</span>
@@ -111,7 +111,7 @@ export const SentimentResults: React.FC<Props> = ({ result }) => {
 
       {/* Sentence Analysis */}
       <div className="bg-white rounded-2xl shadow-lg border border-blue-100 overflow-hidden">
-        <div className="bg-gradient-to-r from-blue-600 to-cyan-600 px-6 py-4">
+        <div className="bg-linear-to-r from-blue-600 to-cyan-600 px-6 py-4">
           <h2 className="text-xl font-semibold text-white flex items-center space-x-2">
             <Target className="w-5 h-5" />
             <span>Análise por Frase</span>
@@ -144,11 +144,11 @@ export const SentimentResults: React.FC<Props> = ({ result }) => {
                     <h4 className="text-sm font-medium text-gray-700 mb-2">Opiniões Identificadas</h4>
                     <div className="space-y-2">
                       {sentence.opinions.map((opinion, opIndex) => (
-                        <div key={opIndex} className="bg-gray-50 rounded p-3">
+                        <div key={opIndex} className="bg-gray-50 rounded-sm p-3">
                           <div className="flex items-center space-x-2 mb-2">
                             <span className="text-sm font-medium text-gray-700">Alvo:</span>
                             <span className="text-sm text-gray-900">"{opinion.target.text}"</span>
-                            <span className={`px-2 py-1 rounded text-xs ${getSentimentColor(opinion.target.sentiment)}`}>
+                            <span className={`px-2 py-1 rounded-sm text-xs ${getSentimentColor(opinion.target.sentiment)}`}>
                               {translateSentiment(opinion.target.sentiment)}
                             </span>
                           </div>
@@ -159,7 +159,7 @@ export const SentimentResults: React.FC<Props> = ({ result }) => {
                                 {opinion.assessments.map((assessment, assIndex) => (
                                   <span 
                                     key={assIndex}
-                                    className={`px-2 py-1 rounded text-xs ${getSentimentColor(assessment.sentiment)}`}
+                                    className={`px-2 py-1 rounded-sm text-xs ${getSentimentColor(assessment.sentiment)}`}
                                   >
                                     "{assessment.text}" ({translateSentiment(assessment.sentiment)})
                                   </span>
