@@ -2,7 +2,10 @@ import { createApp } from "vinxi";
 
 export default createApp({
   server: {
-    preset: "cloudflare-worker",
+    preset: "cloudflare-module",
+    cloudflare: {
+      nodeCompat: true,
+    },
     output: {
       dir: "./dist",
     },
