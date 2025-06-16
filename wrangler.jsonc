@@ -1,13 +1,13 @@
 {
-    "name": "psycare-sentiment",
-    "main": "dist/server/index.mjs",
-    "compatibility_date": "2025-01-01",
-    "assets": {
-        "directory": "./dist/public",
-        "binding": "ASSETS"
-    },
-    "compatibility_flags": [
-    "nodejs_compat"
-  ]
-    
+	"name": "psycare-sentiment",
+	"main": "dist/server/index.mjs",
+	"compatibility_date": "2025-01-01",
+	"assets": {
+		"directory": "./dist/public",
+		"binding": "ASSETS"
+	},
+	"observability": {
+		"enabled": true
+	},
+	"compatibility_flags": ["nodejs_compat"]
 }
