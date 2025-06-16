@@ -1,4 +1,3 @@
-import React from 'react';
 import { SentimentAnalyzer } from './components/SentimentAnalyzer';
 
 function App() {

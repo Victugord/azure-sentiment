@@ -1,18 +1,26 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { createApp } from "vinxi";
 
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react()],
-  optimizeDeps: {
-    exclude: ['lucide-react'],
-  },
+export default createApp({
   server: {
-    proxy: {
-      '/api': {
-        target: 'http://localhost:3001',
-        changeOrigin: true,
-      },
-    },
+    preset: "cloudflare-module",
   },
+  routers: [
+    {
+      name: "public",
+      type: "static",
+      dir: "./public",
+    },
+    {
+      name: "client",
+      type: "spa",
+      handler: "./index.html",
+      base: "/",
+    },
+    {
+      name: "api",
+      type: "http",
+      handler: "./server/entry.ts",
+      base: "/api",
+    },
+  ],
 });

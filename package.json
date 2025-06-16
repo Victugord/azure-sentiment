@@ -4,10 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\"",
-    "dev:client": "vite",
-    "dev:server": "tsx watch server/index.ts",
-    "build": "vite build",
+    "dev": "vinxi dev",
+    "build": "vinxi build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -18,7 +16,8 @@
     "hono": "^4.7.11",
     "lucide-react": "^0.514.0",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "vinxi": "^0.5.7"
   },
   "devDependencies": {
     "@eslint/js": "^9.28.0",

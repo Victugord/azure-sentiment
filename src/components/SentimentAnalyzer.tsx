@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import type React from 'react';
+import { useState } from 'react';
 import { Send, AlertCircle, CheckCircle, Loader2, FileText, BarChart3 } from 'lucide-react';
 import type { SentimentResult, ApiResponse } from '../types/sentiment';
 import { SentimentResults } from './SentimentResults';
