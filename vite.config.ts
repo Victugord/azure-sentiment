@@ -2,7 +2,7 @@ import { createApp } from "vinxi";
 
 export default createApp({
   server: {
-    preset: "cloudflare-module",
+    preset: "cloudflare-worker",
   },
   routers: [
     {
